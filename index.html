@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Color Picker</title>
   </head>
   <body class="h-screen w-screen">
@@ -14,15 +14,39 @@
       <div class="flex flex-col mb-8">
         <label for="r" class="flex gap-4 justify-between">
           <span class="font-bold">Red:</span>
-          <input type="range" min="0" max="255" name="r" id="r" value="0" />
+          <input
+            type="range"
+            min="0"
+            max="255"
+            name="r"
+            id="r"
+            value="0"
+            class="custom-range"
+          />
         </label>
         <label for="g" class="flex gap-4 justify-between">
           <span class="font-bold">Green:</span>
-          <input type="range" min="0" max="255" name="r" id="g" value="0" />
+          <input
+            type="range"
+            min="0"
+            max="255"
+            name="r"
+            id="g"
+            value="0"
+            class="custom-range"
+          />
         </label>
         <label for="b" class="flex gap-4 justify-between">
           <span class="font-bold">Blue:</span>
-          <input type="range" min="0" max="255" name="r" id="b" value="0" />
+          <input
+            type="range"
+            min="0"
+            max="255"
+            name="r"
+            id="b"
+            value="0"
+            class="custom-range"
+          />
         </label>
         <label for="a" class="flex gap-4 justify-between">
           <span class="font-bold">Alpha:</span>
@@ -34,17 +58,26 @@
             id="alpha"
             value="1"
             step="0.01"
+            class="custom-range"
           />
         </label>
       </div>
       <div class="flex justify-between w-full max-w-2xl">
         <div id="show" class="border-4 border-black w-48 h-48"></div>
         <div>
-          <p class="rgb_value" id="rgb-value"></p>
-          <p class="hex_value" id="hex-value"></p>
+          <span class="text-sm font-semibold">rgba</span>
+          <p
+            class="rgb_value text-lg font-bold mb-4 border rounded-md p-2"
+            id="rgb-value"
+          ></p>
+          <span>hex</span>
+          <p
+            class="hex_value text-lg font-bold mb-4 border rounded-md p-2"
+            id="hex-value"
+          ></p>
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
+    <script src="./src/index.js" type="module"></script>
   </body>
 </html>
